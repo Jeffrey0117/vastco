@@ -165,5 +165,30 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+
+
+	// accodion fucntion 
+
+	 
 		
 });
+
+$('.prAccordionContent').hide();
+
+		$('.prAccordion-header').on('click', function () {
+
+			const parentItem = $(this).closest('.prAccordion-item');
+			const content = parentItem.find('.prAccordionContent');
+			const icon = $(this).find('i');
+
+			// toggle content
+			content.slideToggle(300);
+
+			// toggle icon
+			if (icon.hasClass('fa-plus')) {
+				icon.removeClass('fa-plus').addClass('fa-minus');
+			} else {
+				icon.removeClass('fa-minus').addClass('fa-plus');
+			}
+		});

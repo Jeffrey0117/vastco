@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
-    --primaryColor: rgba(0,0,0,0.8);
+    --primaryColor: rgba(0, 0, 0, 0.8);
     --whiteColor: #fff;
     --blackColor: #000;
 }
@@ -10,12 +9,12 @@ html {
     scroll-behavior: smooth;
 }
 
-body {	
+body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
-    font-weight: 400;    
-	background: var(--whiteColor);
-	color: var(--blackColor);	
+    font-weight: 400;
+    background: var(--whiteColor);
+    color: var(--blackColor);
 }
 
 h1,
@@ -51,13 +50,13 @@ a {
     -webkit-transition: 0.2s all ease;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
 }
 
 ul {
     list-style-type: none;
-    padding: 0; 
+    padding: 0;
     margin: 0;
 }
 
@@ -100,12 +99,12 @@ input::-webkit-inner-spin-button {
 }
 
 ::-webkit-selection {
-    color: var(--whiteColor); 
+    color: var(--whiteColor);
     background: var(--primaryColor);
 }
 
 ::-moz-selection {
-    color: var(--whiteColor); 
+    color: var(--whiteColor);
     background: var(--primaryColor);
 }
 
@@ -149,8 +148,8 @@ input::-webkit-inner-spin-button {
     height: 40px;
     line-height: 40px;
     border-radius: 50%;
-    background: var(--primaryColor); 
-    text-align: center; 
+    background: var(--primaryColor);
+    text-align: center;
     font-size: 22px;
     color: #ffffff;
     position: fixed;
@@ -160,8 +159,8 @@ input::-webkit-inner-spin-button {
     animation: lab_top_up 5s linear infinite;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;  
-    z-index: 1;    
+    transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .scrolltotop i {
@@ -190,32 +189,32 @@ input::-webkit-inner-spin-button {
 
 .pluse::before,
 .pluse2::before {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 .pluse::after,
 .pluse::before,
 .pluse2::after,
 .pluse2::before {
-  background: var(--primaryColor); 
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  display: block;
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 0;
+    background: var(--primaryColor);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
 }
 
 .pluse::after,
 .pluse2::after {
-  width: 30px;
-  height: 30px;
-  background: transparent;
-  margin-left: -15px;
-  margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    margin-left: -15px;
+    margin-top: -15px;
 }
 
 .pluse::before {
@@ -224,8 +223,8 @@ input::-webkit-inner-spin-button {
 }
 
 .pluse2::before {
-  -webkit-animation: pluse_animate 3s infinite linear;
-  animation: pluse_animate 3s infinite linear; 
+    -webkit-animation: pluse_animate 3s infinite linear;
+    animation: pluse_animate 3s infinite linear;
 }
 
 @keyframes pluse_animate {
@@ -241,15 +240,16 @@ input::-webkit-inner-spin-button {
     }
 }
 
-
 .container {
     max-width: 90%;
 }
 
 /*======= header-area design =======*/
+
 .header {
     border-bottom: 1px solid #f1f1f1;
 }
+
 .header-wrapper {
     padding-block: 10px;
     display: flex;
@@ -279,14 +279,17 @@ input::-webkit-inner-spin-button {
     /*! width: 7%; */
     padding: 10px;
 }
+
 .memberRegistraion button {
     font-size: 14px;
 }
+
 .memberRegistraion button:hover {
     color: #797979;
 }
 
 /*============ header area style end hare ========== */
+
 /*========== .category slider area style =========== */
 
 .categorySlider-wrapper {
@@ -302,14 +305,15 @@ input::-webkit-inner-spin-button {
 }
 
 .categorySlider-box {
-	flex: 1;
-	max-width: 100%;
+    flex: 1;
+    max-width: 100%;
 }
 
 .categoryItem a {
     font-size: 14px;
     color: #333;
 }
+
 .categoryItem a:hover {
     color: #1881e4;
 }
@@ -325,11 +329,13 @@ input::-webkit-inner-spin-button {
 }
 
 /*============ category area end hare ========== */
+
 /*========== banner area start hare =============== */
 
 .banner-wrapper {
     position: relative;
 }
+
 .banner-wrapper button {
     position: absolute;
     top: 50%;
@@ -338,9 +344,11 @@ input::-webkit-inner-spin-button {
     color: #EDEDED;
     z-index: 10;
 }
+
 .banner-wrapper .sliderPrevBtn2 {
     left: 20px;
 }
+
 .banner-wrapper .sliderNextBtn2 {
     right: 20px;
 }
@@ -370,19 +378,22 @@ input::-webkit-inner-spin-button {
 }
 
 .sidebarLeft ul {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
 .sidebarLeft ul a {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+
 .sidebarLeft ul a i {
     font-size: 30px;
 }
+
 .sidebarLeft ul a span {
     font-size: 14px;
 }
@@ -392,8 +403,6 @@ input::-webkit-inner-spin-button {
     padding-block: 20px;
     max-width: 1382px;
 }
-
-
 
 /* notice area style  */
 
@@ -408,6 +417,7 @@ input::-webkit-inner-spin-button {
     gap: 15px;
     padding-top: 15px;
 }
+
 .TodayRecomanded-area h2 {
     font-size: 18px;
     font-weight: 500;
@@ -441,11 +451,13 @@ input::-webkit-inner-spin-button {
     border-radius: 3px;
     justify-content: space-between;
 }
+
 .recomandedItem span {
     font-size: 17px;
     font-weight: 600;
     flex: 1;
 }
+
 .recomandedItem i {
     font-size: 18px;
 }
@@ -473,6 +485,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     gap: 3px;
 }
+
 .prMoreImage img {
     width: 30px;
     height: 30px;
@@ -486,11 +499,13 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     gap: 6px;
 }
+
 .prInfo p {
     font-size: 12px;
     color: #7A7A7A;
     font-weight: 400;
 }
+
 .prInfo h2 {
     font-size: 20px;
     font-weight: 600;
@@ -504,8 +519,9 @@ input::-webkit-inner-spin-button {
     font-size: 15px;
     font-weight: 500;
 }
+
 .prAction {
-	text-align: center;
+    text-align: center;
 }
 
 .seperate {
@@ -530,17 +546,20 @@ input::-webkit-inner-spin-button {
     justify-content: space-between;
     padding: 10px;
 }
+
 .sectionInfo .sectionTitle {
     font-size: 20px;
     font-weight: 500;
     color: #1C4235;
 }
+
 .sectionInfo ul {
     display: flex;
     flex-direction: column;
     align-items: end;
     gap: 20px;
 }
+
 .sectionInfo ul a {
     padding: 12px 24px;
     border: 1px solid #000;
@@ -552,6 +571,7 @@ input::-webkit-inner-spin-button {
     padding: 10px;
     flex: 1;
 }
+
 .sectionLeft-image img {
     width: 100%;
     border-radius: 20px;
@@ -566,11 +586,12 @@ input::-webkit-inner-spin-button {
 }
 
 .latest-plate-area {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     padding-block: 15px;
 }
+
 .latest-plate-area h4 {
     color: #3B3B3B;
     font-size: 31px;
@@ -581,15 +602,18 @@ input::-webkit-inner-spin-button {
     padding: 10px;
     width: 100%;
 }
+
 .singlePlate img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
 }
+
 .PlateSlider {
-	padding-inline: 20px;
+    padding-inline: 20px;
 }
+
 .plate-slider-area {
     position: relative;
 }
@@ -609,15 +633,16 @@ input::-webkit-inner-spin-button {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.32);
     font-size: 35px;
 }
+
 .plate-slider-area .sliderPrevBtn4,
 .plate-slider-area .sliderPrevBtn5 {
     left: 0;
 }
+
 .plate-slider-area .sliderNextBtn4,
 .plate-slider-area .sliderNextBtn5 {
     right: 0;
 }
-
 
 /*======== sidebar right area ====== */
 
@@ -637,15 +662,18 @@ input::-webkit-inner-spin-button {
     font-weight: 400;
     color: #ADADAD;
 }
+
 .sidebarRight ul {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .sidebarRight ul a {
     border: 1px solid #000;
 }
+
 .sidebarRight ul a {
     width: 100%;
 }
@@ -661,7 +689,7 @@ input::-webkit-inner-spin-button {
     display: flex;
 }
 
-.footer-logo  {
+.footer-logo {
     width: calc(100% / 6);
     padding: 10px;
     display: flex;
@@ -675,15 +703,18 @@ input::-webkit-inner-spin-button {
     gap: 16px;
     text-align: center;
 }
+
 .footer-block h4 {
     font-size: 18px;
     font-weight: 400;
     color: #000;
 }
+
 .footer-block ul {
     display: flex;
     flex-direction: column;
 }
+
 .footer-block ul a {
     font-size: 14px;
     color: #54595F;
@@ -694,6 +725,7 @@ input::-webkit-inner-spin-button {
     padding: 12px;
     background: #fff;
 }
+
 .footer-actions ul {
     gap: 20px;
 }
@@ -729,16 +761,19 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     gap: 10px;
 }
+
 .categorySidebar h4 {
     font-size: 20px;
     font-weight: 600;
 }
+
 .categorySidebar ul {
     padding-block: 10px;
     display: flex;
     flex-direction: column;
     gap: 3px;
 }
+
 .categorySidebar ul a {
     color: #54595F;
 }
@@ -750,4 +785,104 @@ input::-webkit-inner-spin-button {
 .productBodyContainer {
     max-width: 90%;
     margin-inline: auto;
+}
+
+/*=========== Product Inner Page ========== */
+
+.ProductInnerBody {
+    padding-block: 42px;
+}
+
+.container3 {
+    max-width: 75%;
+    margin-inline: auto;
+}
+
+.product-inner-main {
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.prInnerLeft {
+    width: 46%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.prInnerLeft img {
+    width: 100%;
+}
+
+.prInnerLeft ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.prInnerRight {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prInnerBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.prInnerBlock h4 {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.prInnerBlock p {
+    font-size: 14px;
+    color: #7A7A7A;
+    margin-bottom: 20px;
+}
+
+.prAccordion-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #D5D8DC;
+    cursor: pointer;
+}
+
+.prAccordionContent {
+    padding: 20px;
+}
+
+.prAccordionContent p {
+    font-size: 14px;
+    color: #7A7A7A;
+}
+
+.prAccordion-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productIntroduction {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1140px;
+    margin-inline: auto;
+}
+
+.productIntroduction h4 {
+    font-size: 18px;
+    color: #313131;
+    font-weight: 600;
 }
