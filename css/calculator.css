@@ -1,0 +1,844 @@
+/*======================================================
+  Vastco - Calculator Pages Stylesheet
+  - cost-calculator.html
+  - quote-result.html
+======================================================*/
+
+/*------------------------------------------------------
+  Common Styles
+------------------------------------------------------*/
+
+.calculator-main,
+.quote-result-main {
+    padding: 42px 0;
+    min-height: calc(100vh - 200px);
+}
+
+/* Breadcrumb */
+.breadcrumb-area {
+    padding-bottom: 10px;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.breadcrumb-item a {
+    color: #54595F;
+}
+
+.breadcrumb-item a:hover {
+    color: #000;
+}
+
+.breadcrumb-item.active {
+    color: #313131;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #999;
+}
+
+/* Page Title */
+.page-title-area {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.page-title-area h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #313131;
+}
+
+.quote-number {
+    font-size: 14px;
+    color: #7A7A7A;
+    background: #F7F8F8;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/*------------------------------------------------------
+  Calculator Wrapper
+------------------------------------------------------*/
+
+.calculator-wrapper,
+.quote-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*------------------------------------------------------
+  Section Styles
+------------------------------------------------------*/
+
+.calc-section,
+.quote-section {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #E8E8E8;
+    overflow: hidden;
+}
+
+.section-header {
+    background: #F7F8F8;
+    padding: 16px 24px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #313131;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-header h2 i {
+    font-size: 20px;
+    color: #666;
+}
+
+.section-content {
+    padding: 24px;
+}
+
+/*------------------------------------------------------
+  Info Grid (Member Info, Currency Info)
+------------------------------------------------------*/
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-item label {
+    font-size: 12px;
+    color: #7A7A7A;
+    font-weight: 500;
+}
+
+.info-item .info-value {
+    font-size: 16px;
+    color: #313131;
+    font-weight: 500;
+}
+
+/*------------------------------------------------------
+  Form Styles
+------------------------------------------------------*/
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 200px;
+    flex: 1;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #313131;
+    font-weight: 500;
+}
+
+.form-group select,
+.form-group input {
+    padding: 12px 16px;
+    border: 1px solid #D5D8DC;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #313131;
+    background: #fff;
+    transition: border-color 0.2s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.form-group select {
+    cursor: pointer;
+    background-image: url(../images/select-input-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: calc(100% - 15px) 50%;
+    padding-right: 40px;
+}
+
+/*------------------------------------------------------
+  Search Section
+------------------------------------------------------*/
+
+.search-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.search-input-wrapper {
+    flex: 1;
+    min-width: 300px;
+}
+
+.search-input-wrapper select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #D5D8DC;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #313131;
+    background: #fff;
+    cursor: pointer;
+    background-image: url(../images/select-input-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: calc(100% - 15px) 50%;
+    padding-right: 40px;
+}
+
+.btn-add-product {
+    padding: 14px 24px;
+    background: #313131;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-add-product:hover {
+    background: #000;
+}
+
+/*------------------------------------------------------
+  Product Table
+------------------------------------------------------*/
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.product-table,
+.quote-table,
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td,
+.quote-table th,
+.quote-table td,
+.fee-table th,
+.fee-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #E8E8E8;
+    font-size: 14px;
+}
+
+.product-table th,
+.quote-table th,
+.fee-table th {
+    background: #F7F8F8;
+    font-weight: 600;
+    color: #313131;
+}
+
+.product-table tbody tr:hover,
+.quote-table tbody tr:hover {
+    background: #FAFAFA;
+}
+
+.product-table tfoot td,
+.quote-table tfoot td,
+.fee-table tfoot td {
+    background: #F7F8F8;
+    font-weight: 600;
+}
+
+/* Table Inputs */
+.input-price,
+.input-qty {
+    width: 80px;
+    padding: 8px 12px;
+    border: 1px solid #D5D8DC;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.input-price:focus,
+.input-qty:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.subtotal {
+    font-weight: 600;
+    color: #313131;
+}
+
+.btn-delete {
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid #E74C3C;
+    color: #E74C3C;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-delete:hover {
+    background: #E74C3C;
+    color: #fff;
+}
+
+.table-summary {
+    padding-top: 16px;
+    font-size: 14px;
+    color: #7A7A7A;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Fee Table Full (5 columns) */
+.fee-table-full th,
+.fee-table-full td {
+    text-align: center;
+}
+
+.fee-table-full th:first-child,
+.fee-table-full td:first-child {
+    text-align: left;
+}
+
+.fee-table-full th:last-child,
+.fee-table-full td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+/*------------------------------------------------------
+  Fee Table Merged (Excel Style)
+------------------------------------------------------*/
+
+.fee-table-merged {
+    border: 1px solid #000;
+}
+
+.fee-table-merged th,
+.fee-table-merged td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.fee-table-merged thead th {
+    background: #E8E8E8;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #999;
+}
+
+.fee-table-merged .col-category {
+    width: 80px;
+}
+
+.fee-table-merged .col-item {
+    width: auto;
+    text-align: left;
+}
+
+.fee-table-merged .col-price,
+.fee-table-merged .col-twd,
+.fee-table-merged .col-tax,
+.fee-table-merged .col-subtotal {
+    width: 120px;
+    text-align: right;
+}
+
+/* Category Cell (rowspan) */
+.category-cell {
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    writing-mode: horizontal-tb;
+    background: #F5F5F5;
+}
+
+.category-credit {
+    background: #FFF9E6;
+    color: #8B6914;
+}
+
+.category-before {
+    background: #E6F3FF;
+    color: #1565C0;
+}
+
+.category-arrival {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+/* Subtotal Cell (rowspan) */
+.subtotal-cell {
+    font-weight: 700;
+    text-align: right;
+    vertical-align: middle;
+    background: #FAFAFA;
+}
+
+/* Section Divider */
+.section-divider td {
+    border-top: 2px solid #999;
+}
+
+/* Highlight Row (營業稅) */
+.highlight-row td {
+    background: #FFFDE7;
+}
+
+/* Total Row */
+.fee-table-merged tfoot .total-row td {
+    background: #F0F0F0;
+    font-weight: 700;
+    font-size: 14px;
+    border-top: 2px solid #000;
+}
+
+.fee-table-merged .total-value {
+    font-size: 16px;
+    color: #000;
+}
+
+/*------------------------------------------------------
+  Summary Table (Excel Style)
+------------------------------------------------------*/
+
+.summary-table-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.summary-table {
+    border-collapse: collapse;
+    min-width: 280px;
+}
+
+.summary-table td {
+    border: 1px solid #ccc;
+    padding: 10px 16px;
+}
+
+.summary-label-cell {
+    background: #F5F5F5;
+    font-weight: 500;
+    text-align: right;
+    width: 100px;
+}
+
+.summary-value-cell {
+    text-align: right;
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.summary-total-row td {
+    background: #E0E0E0;
+    font-weight: 700;
+    font-size: 16px;
+    border-top: 2px solid #000;
+}
+
+/*------------------------------------------------------
+  Average Table (費用平均)
+------------------------------------------------------*/
+
+.average-table-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.average-table {
+    border-collapse: collapse;
+    min-width: 280px;
+}
+
+.average-table td {
+    border: 1px solid #ccc;
+    padding: 10px 16px;
+}
+
+.average-table .avg-label {
+    background: #F5F5F5;
+    font-weight: 500;
+    text-align: left;
+    min-width: 120px;
+}
+
+.average-table .avg-value {
+    text-align: right;
+    font-weight: 500;
+    min-width: 120px;
+}
+
+.average-table .avg-spacer td {
+    border: none;
+    padding: 6px;
+    background: transparent;
+}
+
+/* 黃色高亮行 (每片平均成本、每坪片數、每坪單價) */
+.average-table .avg-highlight td {
+    background: #FFFF00;
+    font-weight: 700;
+}
+
+.average-table .avg-highlight .avg-label {
+    background: #FFFF00;
+}
+
+.average-table .avg-highlight .avg-value {
+    background: #FFFF00;
+}
+
+/*------------------------------------------------------
+  Average Price
+------------------------------------------------------*/
+
+.average-price {
+    padding-top: 16px;
+    font-size: 16px;
+    color: #313131;
+    text-align: right;
+}
+
+.average-price strong {
+    color: #000;
+    font-size: 18px;
+}
+
+/*------------------------------------------------------
+  Summary Box
+------------------------------------------------------*/
+
+.summary-box {
+    background: #F7F8F8;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.summary-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.summary-value {
+    font-size: 16px;
+    color: #313131;
+    font-weight: 500;
+}
+
+.summary-divider {
+    height: 1px;
+    background: #D5D8DC;
+    margin: 10px 0;
+}
+
+.summary-total {
+    padding-top: 16px;
+}
+
+.summary-total .summary-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #313131;
+}
+
+.summary-total .summary-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+.summary-twd .summary-label {
+    font-size: 14px;
+    color: #7A7A7A;
+}
+
+.summary-twd .summary-value {
+    font-size: 18px;
+    color: #1C4235;
+    font-weight: 600;
+}
+
+/*------------------------------------------------------
+  Container Info (B7)
+------------------------------------------------------*/
+
+.container-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.container-info-item {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background: #F7F8F8;
+    border-radius: 12px;
+    align-items: center;
+}
+
+.container-icon {
+    width: 60px;
+    height: 60px;
+    background: #313131;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-icon i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.container-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.container-detail label {
+    font-size: 12px;
+    color: #7A7A7A;
+    font-weight: 500;
+}
+
+.container-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #313131;
+}
+
+.container-twd {
+    font-size: 14px;
+    color: #1C4235;
+    font-weight: 500;
+}
+
+/*------------------------------------------------------
+  Action Buttons
+------------------------------------------------------*/
+
+.action-section {
+    background: transparent;
+    border: none;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.btn-primary {
+    padding: 16px 40px;
+    background: #313131;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: #000;
+    color: #fff;
+}
+
+.btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    padding: 16px 32px;
+    background: #fff;
+    color: #313131;
+    border: 1px solid #313131;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background: #313131;
+    color: #fff;
+}
+
+.btn-generate-quote {
+    font-size: 18px;
+    padding: 18px 60px;
+}
+
+/*------------------------------------------------------
+  Print Styles
+------------------------------------------------------*/
+
+@media print {
+    .header,
+    .footer-area,
+    .breadcrumb-area,
+    .action-section,
+    .scrolltotop {
+        display: none !important;
+    }
+
+    .calculator-main,
+    .quote-result-main {
+        padding: 0;
+    }
+
+    .calc-section,
+    .quote-section {
+        break-inside: avoid;
+        border: 1px solid #ddd;
+    }
+
+    .page-title-area h1 {
+        font-size: 24px;
+    }
+}
+
+/*------------------------------------------------------
+  Responsive
+------------------------------------------------------*/
+
+@media (max-width: 768px) {
+    .page-title-area h1 {
+        font-size: 22px;
+    }
+
+    .section-content {
+        padding: 16px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        min-width: 100%;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    .search-input-wrapper {
+        min-width: 100%;
+    }
+
+    .input-price,
+    .input-qty {
+        width: 60px;
+    }
+
+    .summary-box {
+        max-width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-table th,
+    .product-table td,
+    .quote-table th,
+    .quote-table td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

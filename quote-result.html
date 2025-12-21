@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <!-- Meta setup -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="報價結果">
+        <meta name="description" content="Vastco 產出報價結果">
+        <!-- Title -->
+        <title>報價結果 - Vastco</title>
+        <!-- Fav Icon -->
+        <link rel="icon" href="images/favicon.ico">
+        <!-- Include Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- link font awesome -->
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <!-- Main StyleSheet -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Calculator Page CSS -->
+        <link rel="stylesheet" href="css/calculator.css">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <!-- header-area -->
+        <header class="header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="headerLogo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="Vastco Logo">
+                        </a>
+                    </div>
+                    <div class="headerSeachbar">
+                        <input type="text" placeholder="搜尋">
+                    </div>
+                    <div class="memberRegistraion">
+                        <button>
+                            <i class="fa-solid fa-pen"></i>
+                            <span>會員註冊</span>
+                        </button>
+                    </div>
+                    <div class="memberRegistraion">
+                        <button>
+                            <i class="fa-solid fa-user"></i>
+                            <span>會員登入</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-area end -->
+
+        <!-- main content -->
+        <main class="calculator-main quote-result-main">
+            <div class="container2">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb-area">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                            <li class="breadcrumb-item"><a href="cost-calculator.html">成本試算</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">報價結果</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <!-- Page Title -->
+                <div class="page-title-area">
+                    <h1>報價結果</h1>
+                    <span class="quote-number">報價編號：Q-20251221-001</span>
+                </div>
+
+                <!-- Quote Result -->
+                <div class="quote-wrapper">
+                    <!-- B1: 報價基本資訊 -->
+                    <section class="quote-section basic-info-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-info-circle"></i> 報價基本資訊</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>姓名</label>
+                                    <span class="info-value">王小明</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Email</label>
+                                    <span class="info-value">test@mail.com</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>手機號碼</label>
+                                    <span class="info-value">0912-XXX-XXX</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>報價時間</label>
+                                    <span class="info-value">2025/12/21 14:30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- B2: 幣別與匯率資訊 -->
+                    <section class="quote-section currency-info-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-money-bill-wave"></i> 幣別與匯率資訊</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>幣別</label>
+                                    <span class="info-value">USD - 美元</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>匯率</label>
+                                    <span class="info-value">31.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- B3: 商品彙總 -->
+                    <section class="quote-section product-summary-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-boxes-stacked"></i> 商品彙總</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="table-responsive">
+                                <table class="quote-table">
+                                    <thead>
+                                        <tr>
+                                            <th>品牌</th>
+                                            <th>品名</th>
+                                            <th>體積 (cm³)</th>
+                                            <th>單價</th>
+                                            <th>數量</th>
+                                            <th>小計</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>品牌A</td>
+                                            <td>商品名稱 1</td>
+                                            <td>1,200</td>
+                                            <td>$100</td>
+                                            <td>2</td>
+                                            <td>$200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>品牌B</td>
+                                            <td>商品名稱 2</td>
+                                            <td>800</td>
+                                            <td>$80</td>
+                                            <td>1</td>
+                                            <td>$80</td>
+                                        </tr>
+                                        <tr>
+                                            <td>品牌C</td>
+                                            <td>商品名稱 3</td>
+                                            <td>1,500</td>
+                                            <td>$150</td>
+                                            <td>3</td>
+                                            <td>$450</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="5" class="text-right"><strong>商品總計</strong></td>
+                                            <td><strong>$730</strong></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="average-price">
+                                <span>平均單價：<strong>$121.67</strong></span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- B4: 費用明細 (整合表格) -->
+                    <section class="quote-section fee-detail-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-receipt"></i> 費用明細</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="table-responsive">
+                                <table class="fee-table fee-table-merged">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-category">分類</th>
+                                            <th class="col-item">項目說明</th>
+                                            <th class="col-price">單價(幣別)</th>
+                                            <th class="col-twd">台幣</th>
+                                            <th class="col-tax">稅金</th>
+                                            <th class="col-subtotal">小計</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 信用狀 -->
+                                        <tr>
+                                            <td rowspan="4" class="category-cell category-credit">信用狀</td>
+                                            <td>貨款即期結購</td>
+                                            <td>€12,154.98</td>
+                                            <td>NT$419,347</td>
+                                            <td></td>
+                                            <td rowspan="4" class="subtotal-cell">NT$421,847</td>
+                                        </tr>
+                                        <tr>
+                                            <td>開狀手續費</td>
+                                            <td>NT$800.00</td>
+                                            <td>NT$800</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>開狀郵電費</td>
+                                            <td>NT$1,200.00</td>
+                                            <td>NT$1,200</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>信保費</td>
+                                            <td>NT$498.00</td>
+                                            <td>NT$498</td>
+                                            <td>NT$2</td>
+                                        </tr>
+                                        <!-- 抵台前費用 -->
+                                        <tr class="section-divider">
+                                            <td rowspan="6" class="category-cell category-before">抵台前<br>費用</td>
+                                            <td>保險費</td>
+                                            <td>NT$400.00</td>
+                                            <td>NT$400</td>
+                                            <td></td>
+                                            <td rowspan="6" class="subtotal-cell">NT$1,355</td>
+                                        </tr>
+                                        <tr>
+                                            <td>海運費</td>
+                                            <td>US$700.00</td>
+                                            <td>NT$23,100</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>低硫燃油附加費</td>
+                                            <td>US$20.00</td>
+                                            <td>NT$660</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>其他費用</td>
+                                            <td>€510.00</td>
+                                            <td>NT$17,595</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>小數位差</td>
+                                            <td>NT$0</td>
+                                            <td>NT$0</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>小提單製作費</td>
+                                            <td>NT$1,800</td>
+                                            <td>NT$1,800</td>
+                                            <td>NT$90</td>
+                                        </tr>
+                                        <!-- 抵台入關 -->
+                                        <tr class="section-divider">
+                                            <td rowspan="14" class="category-cell category-arrival">抵台入關</td>
+                                            <td>吊櫃費</td>
+                                            <td>NT$5,600</td>
+                                            <td>NT$5,600</td>
+                                            <td>NT$280</td>
+                                            <td rowspan="14" class="subtotal-cell">NT$7,770</td>
+                                        </tr>
+                                        <tr>
+                                            <td>關稅-進口稅</td>
+                                            <td>NT$46,887</td>
+                                            <td>NT$46,887</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>關稅-推廣貿易服務費</td>
+                                            <td>NT$0</td>
+                                            <td>NT$0</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="highlight-row">
+                                            <td>關稅-營業稅</td>
+                                            <td>NT$25,788</td>
+                                            <td>NT$25,788</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>封條費</td>
+                                            <td>NT$100</td>
+                                            <td>NT$100</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>海關驗櫃費</td>
+                                            <td>NT$250</td>
+                                            <td>NT$250</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>檢驗車費</td>
+                                            <td>NT$250</td>
+                                            <td>NT$250</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>驗關車費</td>
+                                            <td>NT$200</td>
+                                            <td>NT$200</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>集中查驗費(C3)</td>
+                                            <td></td>
+                                            <td>NT$0</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>輸建費</td>
+                                            <td>NT$200</td>
+                                            <td>NT$200</td>
+                                            <td>NT$10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>報關手續費</td>
+                                            <td>NT$700</td>
+                                            <td>NT$700</td>
+                                            <td>NT$35</td>
+                                        </tr>
+                                        <tr>
+                                            <td>報關代辦手續費(理貨工資)</td>
+                                            <td>NT$2,000</td>
+                                            <td>NT$2,000</td>
+                                            <td>NT$100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>運費-台中(1櫃)</td>
+                                            <td>NT$5,900</td>
+                                            <td>NT$5,900</td>
+                                            <td>NT$295</td>
+                                        </tr>
+                                        <tr>
+                                            <td>堆高機費用</td>
+                                            <td>NT$2,000</td>
+                                            <td>NT$2,000</td>
+                                            <td>NT$100</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="total-row">
+                                            <td colspan="5" class="text-right">總支出</td>
+                                            <td class="total-value">NT$556,871</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- B6: 總計 Summary -->
+                    <section class="quote-section summary-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-calculator"></i> 總計 Summary</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="summary-table-wrapper">
+                                <table class="summary-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="summary-label-cell">貨款</td>
+                                            <td class="summary-value-cell">NT$419,347</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="summary-label-cell">稅金</td>
+                                            <td class="summary-value-cell">NT$72,675</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="summary-label-cell">其他費用</td>
+                                            <td class="summary-value-cell">NT$64,849</td>
+                                        </tr>
+                                        <tr class="summary-total-row">
+                                            <td class="summary-label-cell">NT$556,871</td>
+                                            <td class="summary-value-cell"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- B7: 費用平均 -->
+                    <section class="quote-section average-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-calculator"></i> 費用平均</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="average-table-wrapper">
+                                <table class="average-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="avg-label">整櫃m²</td>
+                                            <td class="avg-value">1013.76</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avg-label">整櫃價格</td>
+                                            <td class="avg-value">12154.9824</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avg-label">整櫃總片數</td>
+                                            <td class="avg-value">1408</td>
+                                        </tr>
+                                        <tr class="avg-spacer"></tr>
+                                        <tr>
+                                            <td class="avg-label">完稅價格</td>
+                                            <td class="avg-value">NT$468,872</td>
+                                        </tr>
+                                        <tr class="avg-spacer"></tr>
+                                        <tr>
+                                            <td class="avg-label">營業稅基</td>
+                                            <td class="avg-value">NT$515,759</td>
+                                        </tr>
+                                        <tr class="avg-spacer"></tr>
+                                        <tr class="avg-highlight">
+                                            <td class="avg-label">每片平均成本</td>
+                                            <td class="avg-value">NT$395.50</td>
+                                        </tr>
+                                        <tr class="avg-spacer"></tr>
+                                        <tr class="avg-highlight">
+                                            <td class="avg-label">每坪片數</td>
+                                            <td class="avg-value">4.5</td>
+                                        </tr>
+                                        <tr class="avg-highlight">
+                                            <td class="avg-label">每坪單價</td>
+                                            <td class="avg-value">NT$1,779.77</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 操作區 -->
+                    <section class="quote-section action-section">
+                        <div class="action-buttons">
+                            <a href="cost-calculator.html" class="btn-secondary">
+                                <i class="fa-solid fa-arrow-left"></i> 返回修改
+                            </a>
+                            <button type="button" class="btn-secondary" onclick="window.print()">
+                                <i class="fa-solid fa-print"></i> 列印
+                            </button>
+                            <button type="button" class="btn-primary" disabled>
+                                <i class="fa-solid fa-file-excel"></i> 匯出 Excel
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <!-- main content end -->
+
+        <!-- footer area -->
+        <footer class="footer-area">
+            <div class="container">
+                <div class="footer-wrapper">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="Vastco Logo">
+                        </a>
+                    </div>
+                    <div class="footer-block">
+                        <h4>關於我們</h4>
+                        <ul>
+                            <li><a href="#">品牌故事</a></li>
+                            <li><a href="#">網站規則</a></li>
+                            <li><a href="#">會員註冊</a></li>
+                            <li><a href="#">Q&A</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h4>了解商品</h4>
+                        <ul>
+                            <li><a href="#">商品瀏覽</a></li>
+                            <li><a href="#">運費試算</a></li>
+                            <li><a href="cost-calculator.html">成本試算</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h4>相關合作</h4>
+                        <ul>
+                            <li><a href="#">品牌合作</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h4>聯絡我們</h4>
+                        <ul>
+                            <li><a href="#">聯絡信箱</a></li>
+                            <li><a href="#">連路電話</a></li>
+                            <li><a href="#">統一編號</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block footer-actions">
+                        <ul>
+                            <li><a href="#">聯絡信箱</a></li>
+                            <li><a href="#">連路電話</a></li>
+                            <li><a href="#">統一編號</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+
+        <!-- Main jQuery -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap.bundle Script -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- Custom jQuery -->
+        <script src="js/scripts.js"></script>
+        <!-- Scroll-Top button -->
+        <a href="#" class="scrolltotop" style="display: none;">
+            <i class="fa-regular fa-arrow-up" aria-hidden="true"></i>
+            <span class="pluse"></span>
+            <span class="pluse2"></span>
+        </a>
+    </body>
+</html>

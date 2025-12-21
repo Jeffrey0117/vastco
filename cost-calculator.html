@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <!-- Meta setup -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="成本試算">
+        <meta name="description" content="Vastco 成本試算">
+        <!-- Title -->
+        <title>成本試算 - Vastco</title>
+        <!-- Fav Icon -->
+        <link rel="icon" href="images/favicon.ico">
+        <!-- Include Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- link font awesome -->
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <!-- Main StyleSheet -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Calculator Page CSS -->
+        <link rel="stylesheet" href="css/calculator.css">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+        <!-- header-area -->
+        <header class="header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="headerLogo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="Vastco Logo">
+                        </a>
+                    </div>
+                    <div class="headerSeachbar">
+                        <input type="text" placeholder="搜尋">
+                    </div>
+                    <div class="memberRegistraion">
+                        <button>
+                            <i class="fa-solid fa-pen"></i>
+                            <span>會員註冊</span>
+                        </button>
+                    </div>
+                    <div class="memberRegistraion">
+                        <button>
+                            <i class="fa-solid fa-user"></i>
+                            <span>會員登入</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-area end -->
+
+        <!-- main content -->
+        <main class="calculator-main">
+            <div class="container2">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb-area">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">成本試算</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <!-- Page Title -->
+                <div class="page-title-area">
+                    <h1>成本試算</h1>
+                </div>
+
+                <!-- Calculator Form -->
+                <div class="calculator-wrapper">
+                    <!-- A1: 會員資訊區 -->
+                    <section class="calc-section member-info-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-user-circle"></i> 會員資訊</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>姓名</label>
+                                    <span class="info-value">王小明</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Email</label>
+                                    <span class="info-value">test@mail.com</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>手機號碼</label>
+                                    <span class="info-value">0912-XXX-XXX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- A2: 幣別與匯率設定區 -->
+                    <section class="calc-section currency-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-money-bill-wave"></i> 幣別與匯率設定</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="currency">幣別</label>
+                                    <select id="currency" name="currency">
+                                        <option value="USD">USD - 美元</option>
+                                        <option value="EUR">EUR - 歐元</option>
+                                        <option value="JPY">JPY - 日圓</option>
+                                        <option value="CNY">CNY - 人民幣</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exchange-rate">匯率</label>
+                                    <input type="number" id="exchange-rate" name="exchange-rate" value="31.5" step="0.01">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- A3: 商品查找區 -->
+                    <section class="calc-section product-search-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-search"></i> 商品查找</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="search-row">
+                                <div class="search-input-wrapper">
+                                    <select id="product-select" name="product-select">
+                                        <option value="">請選擇或輸入商品名稱...</option>
+                                        <option value="product-1">品牌A - 商品名稱 1</option>
+                                        <option value="product-2">品牌B - 商品名稱 2</option>
+                                        <option value="product-3">品牌C - 商品名稱 3</option>
+                                        <option value="product-4">品牌D - 商品名稱 4</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn-add-product" id="btn-add-product">
+                                    <i class="fa-solid fa-plus"></i> 加入商品
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- A4: 商品明細 (購物車) -->
+                    <section class="calc-section product-list-section">
+                        <div class="section-header">
+                            <h2><i class="fa-solid fa-shopping-cart"></i> 商品明細</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="table-responsive">
+                                <table class="product-table">
+                                    <thead>
+                                        <tr>
+                                            <th>品牌</th>
+                                            <th>品名</th>
+                                            <th>體積 (cm³)</th>
+                                            <th>單價</th>
+                                            <th>數量</th>
+                                            <th>小計</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="product-table-body">
+                                        <tr>
+                                            <td>品牌A</td>
+                                            <td>商品名稱 1</td>
+                                            <td>1200</td>
+                                            <td><input type="number" class="input-price" value="100"></td>
+                                            <td><input type="number" class="input-qty" value="2" min="1"></td>
+                                            <td class="subtotal">$200</td>
+                                            <td><button class="btn-delete"><i class="fa-solid fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>品牌B</td>
+                                            <td>商品名稱 2</td>
+                                            <td>800</td>
+                                            <td><input type="number" class="input-price" value="80"></td>
+                                            <td><input type="number" class="input-qty" value="1" min="1"></td>
+                                            <td class="subtotal">$80</td>
+                                            <td><button class="btn-delete"><i class="fa-solid fa-trash"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>品牌C</td>
+                                            <td>商品名稱 3</td>
+                                            <td>1500</td>
+                                            <td><input type="number" class="input-price" value="150"></td>
+                                            <td><input type="number" class="input-qty" value="3" min="1"></td>
+                                            <td class="subtotal">$450</td>
+                                            <td><button class="btn-delete"><i class="fa-solid fa-trash"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-summary">
+                                <span>共 <strong id="total-items">3</strong> 項商品</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- A5: 操作區 -->
+                    <section class="calc-section action-section">
+                        <div class="action-buttons">
+                            <a href="quote-result.html" class="btn-primary btn-generate-quote">
+                                <i class="fa-solid fa-file-invoice-dollar"></i> 產出報價
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <!-- main content end -->
+
+        <!-- footer area -->
+        <footer class="footer-area">
+            <div class="container">
+                <div class="footer-wrapper">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="Vastco Logo">
+                        </a>
+                    </div>
+                    <div class="footer-block">
+                        <h4>關於我們</h4>
+                        <ul>
+                            <li><a href="#">品牌故事</a></li>
+                            <li><a href="#">網站規則</a></li>
+                            <li><a href="#">會員註冊</a></li>
+                            <li><a href="#">Q&A</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h4>了解商品</h4>
+                        <ul>
+                            <li><a href="#">商品瀏覽</a></li>
+                            <li><a href="#">運費試算</a></li>
+                            <li><a href="cost-calculator.html">成本試算</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h4>相關合作</h4>
+                        <ul>
+                            <li><a href="#">品牌合作</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h4>聯絡我們</h4>
+                        <ul>
+                            <li><a href="#">聯絡信箱</a></li>
+                            <li><a href="#">連路電話</a></li>
+                            <li><a href="#">統一編號</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block footer-actions">
+                        <ul>
+                            <li><a href="#">聯絡信箱</a></li>
+                            <li><a href="#">連路電話</a></li>
+                            <li><a href="#">統一編號</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+
+        <!-- Main jQuery -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap.bundle Script -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- Custom jQuery -->
+        <script src="js/scripts.js"></script>
+        <!-- Scroll-Top button -->
+        <a href="#" class="scrolltotop" style="display: none;">
+            <i class="fa-regular fa-arrow-up" aria-hidden="true"></i>
+            <span class="pluse"></span>
+            <span class="pluse2"></span>
+        </a>
+    </body>
+</html>
