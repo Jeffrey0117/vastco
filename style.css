@@ -780,22 +780,28 @@ input::-webkit-inner-spin-button {
 
 .quantity-range {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 8px;
     padding-top: 10px;
 }
 
+.quantity-range .qty-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .quantity-range span {
     color: #666;
+    font-size: 14px;
 }
 
 .qty-input {
-    width: 70px;
+    width: 100%;
     padding: 8px 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
-    text-align: center;
 }
 
 .qty-input:focus {
