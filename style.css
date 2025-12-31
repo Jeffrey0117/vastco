@@ -886,3 +886,27 @@ input::-webkit-inner-spin-button {
     color: #313131;
     font-weight: 600;
 }
+
+/* Inquiry Button */
+.inquiry-btn-wrapper {
+    margin-top: 20px;
+}
+
+.btn-inquiry {
+    display: block;
+    width: 100%;
+    padding: 14px 32px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s all ease;
+}
+
+.btn-inquiry:hover {
+    background-color: #333;
+    color: #fff;
+}
