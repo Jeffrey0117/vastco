@@ -977,63 +977,21 @@ input::-webkit-inner-spin-button {
     padding-top: 30px;
 }
 
-.rules-section h3 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #313131;
-    margin-bottom: 30px;
-}
-
-.rules-section h3 span {
-    font-weight: 400;
-    color: #7A7A7A;
-}
-
 .rule-block {
     margin-bottom: 30px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #eee;
-}
-
-.rule-block:last-child {
-    border-bottom: none;
 }
 
 .rule-block h4 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     color: #313131;
     margin-bottom: 15px;
 }
 
-.rule-block ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.rule-block ul li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
+.rule-block p {
     font-size: 14px;
     color: #7A7A7A;
     line-height: 1.8;
-}
-
-.rule-block ul li:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 6px;
-    height: 6px;
-    background-color: #313131;
-    border-radius: 50%;
-}
-
-.rule-block ul li:last-child {
-    margin-bottom: 0;
 }
 
 /*============ Brand Partners Page ========== */
