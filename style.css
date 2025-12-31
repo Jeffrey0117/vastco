@@ -778,6 +778,31 @@ input::-webkit-inner-spin-button {
     color: #54595F;
 }
 
+.quantity-range {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 10px;
+}
+
+.quantity-range span {
+    color: #666;
+}
+
+.qty-input {
+    width: 70px;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.qty-input:focus {
+    border-color: #999;
+    outline: none;
+}
+
 .ProductBody {
     flex: 1;
 }
